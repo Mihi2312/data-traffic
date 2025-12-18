@@ -1,150 +1,116 @@
 Traffic Growth Prediction Using Historical Data
+
 Project Overview
 
-This project demonstrates how Machine Learning can be used to predict future telecom traffic growth using historical data.
-It focuses on understanding the end-to-end ML workflow rather than building a production-grade system.
+This project demonstrates how Machine Learning can be used to predict future telecom traffic growth using historical data. The project focuses on understanding the complete ML workflow including data preparation, model training, prediction, and visualization.
 
-The project uses a Linear Regression model to learn traffic trends and forecast future traffic usage.
+The goal is to show how traffic trends can be analyzed and forecasted to support telecom network planning.
 
- Objective
+Objective
 
-Analyze historical telecom traffic data
+The objectives of this project are:
 
-Predict future traffic growth trends
+* Analyze historical telecom traffic data
+* Predict future traffic growth trends
+* Visualize actual versus predicted traffic
+* Understand the application of Machine Learning in telecom systems
 
-Visualize actual vs predicted traffic
-
-Understand the practical use of ML in telecom network planning
-
- Tools & Technologies Used
-
+Tools and Technologies Used
 Platform: Google Colab
-
-Language: Python
+Programming Language: Python
 
 Libraries:
 
-Pandas
+* Pandas
+* NumPy
+* Scikit-learn
+* Matplotlib
 
-NumPy
+All tools and libraries used in this project are open source.
 
-Scikit-learn
+Dataset Description
 
-Matplotlib
+The dataset used in this project is synthetically generated to simulate telecom traffic behavior.
 
-All tools used are open-source.
+Dataset details:
 
-📂 Dataset Description
+* Type: Synthetic historical traffic data
+* Number of records: 2000
 
-Type: Synthetic telecom traffic data
+Features included:
 
-Size: 2000 records
+* active_users: Number of active users
+* avg_data_per_user: Average data usage per user in GB
+* peak_hour_traffic: Peak hour traffic in GB
+* video_streaming: Video streaming traffic in GB
+* voice_calls: Voice call traffic
+* iot_devices: Number of IoT devices
+* network_load: Network utilization percentage
+* packet_loss: Packet loss percentage
+* latency_ms: Network latency in milliseconds
+* day_number: Time index for trend learning
 
-Features Used:
+Machine Learning Approach
 
-Feature Name	Description
-active_users	Number of active users
-avg_data_per_user	Average data usage per user (GB)
-peak_hour_traffic	Peak hour traffic (GB)
-video_streaming	Video streaming traffic (GB)
-voice_calls	Voice call traffic
-iot_devices	Number of IoT devices
-network_load	Network utilization (%)
-packet_loss	Packet loss (%)
-latency_ms	Network latency (ms)
-day_number	Time index
+The following steps were followed:
 
-The dataset was generated programmatically using the Faker library.
+1. Loaded the dataset using Pandas
+2. Performed data cleaning and preprocessing
+3. Split the dataset into training and testing sets
+4. Trained a Linear Regression model
+5. Predicted traffic values on test data
+6. Evaluated model performance using Mean Absolute Error and Mean Squared Error
+7. Visualized historical data, predicted values, and future traffic trends
 
- Machine Learning Approach
+Results and Visualization
 
-Load dataset using Pandas
-
-Perform basic data cleaning and preprocessing
-
-Split data into training and testing sets
-
-Train a Linear Regression model
-
-Predict traffic values
-
-Evaluate model using:
-
-Mean Absolute Error (MAE)
-
-Mean Squared Error (MSE)
-
-Visualize:
-
-Historical traffic
-
-Predicted traffic
-
-Future traffic forecast
-
- Results & Visualization
-
-The model successfully learned the traffic growth trend
-
-Predictions closely followed historical patterns
-
+The trained model successfully learned the traffic growth trend from historical data.
+Predicted values closely follow actual traffic patterns.
 Graphs clearly show:
 
-Past traffic data
-
-Model predictions
-
-Future traffic forecast
+* Historical traffic data
+* Model predictions on test data
+* Future traffic forecast
 
 Features Implemented
-Mandatory
 
-Data generation and loading
+Mandatory features:
 
-ML model training
+* Data loading and preprocessing
+* Machine learning model training
+* Traffic prediction
+* Visualization of results
 
-Traffic prediction
+Optional features:
 
-Visualization
+* User-defined number of future prediction days
+* Error calculation (MAE and MSE)
+* Clean and readable graphs
 
-Optional (Bonus)
+Project Structure
 
-User-defined future prediction days
+traffic-growth-prediction
 
-Error calculation (MAE & MSE)
+* traffic_prediction.ipynb
+* traffic_data.csv
+* README.md
+* output_graph.png
 
-Clean and readable plots
+Learning Outcomes
 
- Project Structure
-traffic-growth-prediction/
-│
-├── traffic_prediction.ipynb
-├── traffic_data.csv
-├── README.md
-└── output_graph.png
+After completing this project:
 
- Learnings & Outcome
+* Understood how Machine Learning can be applied in telecom traffic forecasting
+* Learned regression modeling from scratch
+* Gained hands-on experience with Google Colab and ML libraries
+* Improved skills in data visualization and interpretation
 
-Understood how ML applies to telecom traffic forecasting
+Future Enhancements
 
-Learned regression modeling from scratch
+* Use advanced regression models
+* Include seasonal traffic patterns
+* Work with real telecom datasets
+* Build a web-based dashboard for visualization
 
-Gained experience with Google Colab and ML libraries
 
-Improved data visualization and interpretation skills
 
- Future Enhancements
-
-Use advanced models (Polynomial Regression, Random Forest)
-
-Add seasonal trend analysis
-
-Use real-world telecom datasets
-
-Build a web-based dashboard
-
- Author
-
-Name: Your Name
-Project Type: Individual
-Domain: AI / ML – Telecom
